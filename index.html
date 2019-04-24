@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid main-content" id="text">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 search">
+                        <input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" />
+                        <input type="text" id="text-to-find" name="search" placeholder="Type something to search..">
+                        <img src="img/closed.png" alt="closed" width="20px">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="myAccount">
+                            <img src="img/user.png" alt="user" width="20px">
+                            <select class="account">
+                        <option value="user-first">Vasy@gmail.com</option>
+                        <option value="user-second">Alex@gmail.com</option>
+                    </select>
+                        </div>
+                        <select class="lang">
+                    <option value="eng">en-Us</option>
+                    <option value="rus">ru-Rus</option>
+                </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="trabl">WI-FI TROUBLESHOOTER</p>
+                    </div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-4">
+                        <div class="lins">
+                            <div class="">
+                                <a><img src="img/link.png" alt="link" width="16px">Share a link</a>
+                            </div>
+                        </div>
+                        <div class="bookmark">
+                            <a><img src="img/bookmark.png" alt="bookmark" width="24px"></a>
+                        </div>
+                        <div class="settings">
+                            <img src="img/settings.png" alt="settings" width="24px">
+                            <select class="bookmarks">
+                            <option value="bookmarks1">bookmarks1</option>
+                            <option value="bookmarks2">bookmarks2</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="filter container">
+            <div class="">
+                <div class="row titleRow">
+                    <div class="col-md-10">
+                        <p class="titleFilters">FILTERS</p>
+                    </div>
+                    <div class="col-md-2">
+                        <button id="toggleShowBtn">Show/Hide Filters</button>
+                        <!-- <select class="toggleShow" id="toggleShowBtn">
+                            <option value="thWeek" selected disabled
+                            >Show/Hide Filters</option>
+                            <option value="thWeek">Show Filters</option>
+                            <option value="nxWeek">Hide Filter</option>
+                        </select> -->
+                    </div>
+                </div>
+                <div id="filterToggle">
+                    <div class="row">
+                        <div class="col-md-4 filterCat">
+                            <label for="dateRange">DATE RANGE:</label>
+                            <select class="dateRange">
+                                    <option value="prWeek" >Previous Week</option>
+                                    <option value="thWeek">This Week</option>
+                                    <option value="nxWeek">Next Week</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="filterCat">
+                            <label for="location">LOCATION:</label>
+                            <select class="location">
+                            <option value="prWeek" >All</option>
+                            <option value="thWeek">Ukrain</option>
+                            <option value="nxWeek">Poland</option>
+                        </select>
+                        </div>
+                        <div class=" filterCat">
+                            <label for="region">REGION:</label>
+                            <select class="region">
+                            <option value="prWeek" >All</option>
+                            <option value="thWeek">Ukrain</option>
+                            <option value="nxWeek">Poland</option>
+                        </select>
+                        </div>
+                        <div class=" filterCat">
+                            <label for="ssid">SSID:</label>
+                            <select class="ssid">
+                                <option value="prWeek" >All</option>
+                                <option value="thWeek">Ukrain</option>
+                                <option value="nxWeek">Poland</option>
+                            </select>
+                        </div>
+                        <div class=" filterCat">
+                            <label for="bssid">BSSID:</label>
+                            <select class="bssid">
+                            <option value="prWeek" >All</option>
+                            <option value="thWeek">Ukrain</option>
+                            <option value="nxWeek">Poland</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="btnFilters">
+                            <div class="apply">
+                                <button>APPLY</button>
+                            </div>
+                            <div class="reset">
+                                <a>RESET FILTER  <img src="img/reset.png" alt="reset" width="16px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-list">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 metricsLIst someList">
+                    <label for="metrics">METRICS:</label>
+                    <select class="metrics">
+                        <option value="">None</option>
+                        <option value="">Some</option>
+                    </select>
+                </div>
+                <div class="col-md-2 col-sm-4 groupsList someList">
+                    <label for="dateRange">GROUP BY:</label>
+                    <select class="dateRange">
+                        <option value="">Location</option>
+                        <option value="">Location 2</option>
+                    </select>
+                </div>
+                <div class="col-md-5"></div>
+                <div class="col-md-2 col-sm-4 discet">
+                    <a href="">
+                        <img src="img/save.png" alt="save" width="20px">
+                    </a>
+                </div>
+            </div>
+            <div class="listLocations">
+                <table class="table">
+                    <tr>
+                        <th class="activeFild">DATE</th>
+                        <th class="activeFild">LOCATION</th>
+                        <th class="activeFild">SSID</th>
+                        <th class="activeFild">BSSID</th>
+                        <th>TOTAL STREAMS</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>09/29/2018</td>
+                        <td>Location</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>09/29/2018</td>
+                        <td>Location</td>
+                        <td id="long">fdvndofivofrnviosinvosrnvosrnvsoifvoi</td>
+                        <td></td>
+                        <td></td>
+                        <td>fgkhdjh gkglgoyly rooerperlhrfdtyr6uueu</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>09/29/2018</td>
+                        <td>Location</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <tr>
+                            <td>09/29/2018</td>
+                            <td>Location</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>09/29/2018</td>
+                            <td>Location</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>09/29/2018</td>
+                            <td>Location</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>09/29/2018</td>
+                            <td>Location</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
